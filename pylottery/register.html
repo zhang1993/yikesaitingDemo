@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+<div class="container">
+
+    <form class="form-signin" action="127.0.0.1:8080/">
+        <div class="input-group">
+            <label for="inputUsername" class="sr-only">Username</label>
+            <input type="text" id="inputUsername" class="form-control" placeholder="用户名" required autofocus>
+            <label for="inputNickname" class="sr-only">Usernickname</label>
+            <input type="text" id="inputNickname" class="form-control" placeholder="用户昵称" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+            <label for="confirmInputPassword" class="sr-only">Confirm Password</label>
+            <input type="password" id="confirmInputPassword" class="form-control" placeholder="确认密码" required>
+        </div>
+
+        <div class="input-group">
+            <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="customValidate()">注册</button>
+            <button class="btn btn-lg btn-primary btn-block" type="reset">重置</button>
+        </div>
+    </form>
+
+</div>
+<script>
+    function customValidate(){
+        var password = document.getElementById("inputPassword");
+        var confirmpassword = document.getElementById("confirmInputPassword");
+        if(username.value != usernick.value){
+            alert('两次输入的密码不同请重新输入');
+            document.getElementById("inputPassword").onfocus;
+        }
+    }
+</script>
+</body>
+</html>
